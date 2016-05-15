@@ -22,6 +22,6 @@ The data was subset to observations relating to either a mean or a standard devi
 
 ## Averaging
 
-The final dataset (tidymeanvalues.txt) contains mean values broken down by activity name and subject. Each row represents a cell defined by an activity name, subject, and variable. The column meanvalue is the mean of the specified variable for this activity and subject. Note that only variables calculated as means or standard deviations of sets of values are included.
+The final dataset (tidymeanvalues.txt) contains mean values broken down by activity name, subject and variable. Each row represents a cell defined by an activity name, subject, and variable. The column meanvalue is the mean of the specified variable for this activity and subject. Note that only variables calculated as means or standard deviations of sets of values are included.
 
 
