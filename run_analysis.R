@@ -78,6 +78,6 @@ meanvalues.activity.subject <- with(long.thin.data,
                                       mean))
 names(meanvalues.activity.subject)[4] <- "meanvalue"
 
-write.table(meanvalues.activity.subject,file="tidymeanvalues.txt")
+write.table(meanvalues.activity.subject,file="tidymeanvalues.txt",row.names=F)
 
 
