@@ -6,25 +6,25 @@
 
 library(utils)
 download.file(url="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",
-              destfile="wearabledata.zip",method="curl")
-unzip("wearabledata.zip",exdir="wearabledata")
+              destfile="../wearabledata.zip",method="curl")
+unzip("../wearabledata.zip",exdir="../wearabledata")
 
 #############################################################################
 # Question 1: merge the training and the test sets to form one dataset
 #############################################################################
 
 # Read in test and training values and activities
-testdata <- read.table("wearabledata/UCI HAR Dataset/test/X_test.txt")
-test.activities <- read.table("wearabledata/UCI HAR Dataset/test/y_test.txt")
-traindata <- read.table("wearabledata/UCI HAR Dataset/train/X_train.txt")
-train.activities <- read.table("wearabledata/UCI HAR Dataset/train/y_train.txt")
+testdata <- read.table("../wearabledata/UCI HAR Dataset/test/X_test.txt")
+test.activities <- read.table("../wearabledata/UCI HAR Dataset/test/y_test.txt")
+traindata <- read.table("../wearabledata/UCI HAR Dataset/train/X_train.txt")
+train.activities <- read.table("../wearabledata/UCI HAR Dataset/train/y_train.txt")
 
 # Read in activity labels
-activity.labels <- read.table("wearabledata/UCI HAR Dataset/activity_labels.txt")
+activity.labels <- read.table("../wearabledata/UCI HAR Dataset/activity_labels.txt")
 
 # Read in subject IDs for test and training data
-test.subjects <- read.table("wearabledata/UCI HAR Dataset/test/subject_test.txt")
-train.subjects <- read.table("wearabledata/UCI HAR Dataset/train/subject_train.txt")
+test.subjects <- read.table("../wearabledata/UCI HAR Dataset/test/subject_test.txt")
+train.subjects <- read.table("../wearabledata/UCI HAR Dataset/train/subject_train.txt")
 
 # merge test and training data, and add subject and activity variables
 alldata <- rbind(testdata,traindata)
@@ -40,7 +40,7 @@ alldata$train <- c(rep(0,nrow(testdata)),rep(1,nrow(traindata)))
 #             deviation for each measurement.
 #############################################################################
 
-features <- read.table("wearabledata/UCI HAR Dataset/features.txt")
+features <- read.table("../wearabledata/UCI HAR Dataset/features.txt")
    # note: some of the features are repeated!
 std.or.mean <- grep("std\\(\\)|mean\\(\\)",features$V2)
 features$V2[std.or.mean]
