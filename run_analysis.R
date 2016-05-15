@@ -35,9 +35,6 @@ alldata$activity <- factor(c(test.activities$V1,train.activities$V1),
 # Add a new variable "train" indicating training (0) or test (1) observation
 alldata$train <- c(rep(0,nrow(testdata)),rep(1,nrow(traindata)))
 
-# save alldata as .Rdata
-save(alldata,file="alldata.Rdat")
-
 #############################################################################
 # Question 2: Extract only the measurements on the mean and standard
 #             deviation for each measurement.
