@@ -1,5 +1,5 @@
 # wearables
-Reading and Processing Data Week 4 Project
+##Reading and Processing Data Week 4 Project
 This repository contains a single R script, run_analysis.R, as per the project instructions
 The script accesses movement data collected using wearable technology (a smartphone). The data is downloaded from
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
